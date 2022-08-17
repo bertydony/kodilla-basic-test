@@ -1,5 +1,4 @@
 package com.kodilla.inheritance.homework;
-
 public class SystemApp {
     public static void main(String[] args) {
         Windows windows = new Windows(1992);
