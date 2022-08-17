@@ -22,7 +22,4 @@ public class OperatingSystem {
     public int getYear() {
         return year;
     }
-
-
 }
-
