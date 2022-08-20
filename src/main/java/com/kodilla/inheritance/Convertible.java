@@ -15,10 +15,7 @@ public class Convertible extends Car {
         System.out.println("Closing roof...");
     }
 
-
     public void openDoors() {
         System.out.println("Opening 2 doors");
     }
-
-
 }
