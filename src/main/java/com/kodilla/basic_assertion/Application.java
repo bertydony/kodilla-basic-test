@@ -5,9 +5,11 @@ public class Application {
         Calculator calculator = new Calculator();
         int a = 5;
         int b = 7;
+        int n = 2;
+
         int sumResult = calculator.sum(a, b);
         int subtractResult = calculator.subtract(a, b);
-        int squaredResult = calculator.squared(a);
+        int squaredResult = calculator.squared(a, n);
         boolean correct = ResultChecker.assertEquals(12, sumResult);
         if(correct){
             System.out.println("Metoda sum działa poprawnie dla liczb " + a + " i " + b);
