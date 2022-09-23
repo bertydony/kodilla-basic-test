@@ -1,30 +1,68 @@
 package com.kodilla.bank.homework;
 
 public class CashMachine {
-    private int[] values;
+    private int[] operations;
     private int size;
 
     public CashMachine() {
         this.size = 0;
-        this.values = new int[0];
+        this.operations = new int[0];
     }
 
-    public void add(int value) {
+    public void addOperation(int value) {
         this.size++;
         int[] newTab = new int[this.size];
-        System.arraycopy(values, 0, newTab, 0, values.length);
+        System.arraycopy(operations, 0, newTab, 0, operations.length);
         newTab[this.size - 1] = value;
-        this.values = newTab;
+        this.operations = newTab;
     }
 
-    public int[] getValues() {
-        return values;
+    public int[] getOperations() {
+        return operations;
     }
 
-    public void Cash(int cash){
-        if(cash > 0) {
+    public void addPayment() {
 
 
+    }
+
+    public void withdrawMoney() {
+
+    }
+
+    public void countCash() {
+
+    }
+
+    public int numbersOfOperations() {
+        int payments = 0;
+        if (this.operations.length == 0) {
+            return 0;
+        } else {
+            for (int i = 0; i < this.operations.length; i++) {
+                if (this.operations[i] > 0) {
+                    payments += 1;
+                }
+            }
+        }
+        System.out.println(payments);
+        return payments;
+    }
+
+    public double getAverageOfOperations() {
+        if (this.operations.length == 0) {
+            return 0;
+        } else {
+            double sum = 0;
+            int operation = 0;
+            for (int i = 0; operations.length < 0; i++) {
+                if (this.operations[i] > 0) {
+                    sum = sum + this.operations[i];
+                    operation++;
+                }
+            }
+            System.out.println(sum/operation);
+            return sum/operation;
         }
     }
 }
