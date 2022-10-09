@@ -37,6 +37,6 @@ public class Bank {
 
     public double getTotalWithdrawMoney(){
         return this.firstCashMachine.getAverageOfWithdraw() + this.secondCashMachine.getAverageOfWithdraw()
-                + this.thirdCashMachine.getNumberOfWithdraws();
+                + this.thirdCashMachine.getAverageOfWithdraw();
     }
 }

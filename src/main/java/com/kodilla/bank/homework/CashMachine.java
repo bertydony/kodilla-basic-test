@@ -21,38 +21,34 @@ public class CashMachine {
         return operations;
     }
 
-    public int getNumberOfWithdraws(){
+    public int getNumberOfWithdraws() {
         int withdraw = 0;
-        for(int i = 0; i < this.operations.length; i++){
-            if(this.operations[i] < 0){
-                withdraw +=1;
+        for (int i = 0; i < this.operations.length; i++) {
+            if (this.operations[i] < 0) {
+                withdraw += 1;
             }
         }
         return withdraw;
     }
 
-    public double getAverageOfWithdraw(){
+    public double getAverageOfWithdraw() {
         if (this.operations.length == 0) {
             return 0;
         } else {
             double sum = 0;
-            int operation = 0;
             for (int i = 0; i < this.operations.length; i++) {
-                if (this.operations[i] < 0) {
-                    sum = sum + this.operations[i];
-                    operation++;
-                }
+                sum += this.operations[i];
             }
-            return sum/operation;
+            return sum / this.operations.length;
         }
     }
 
     public int getCountOfCash() {
         int sum = 0;
-        for(int i = 0; i < this.operations.length; i++){
+        for (int i = 0; i < this.operations.length; i++) {
             sum = sum + this.operations[i];
         }
-       return sum;
+        return sum;
     }
 
     public int numbersOfOperations() {
@@ -75,15 +71,11 @@ public class CashMachine {
             return 0;
         } else {
             double sum = 0;
-            int operation = 0;
-            for (int i = 0; operations.length < 0; i++) {
-                if (this.operations[i] > 0) {
-                    sum = sum + this.operations[i];
-                    operation++;
-                }
+            for (int i = 0; i < this.operations.length; i++) {
+                sum += this.operations[i];
             }
-            System.out.println(sum/operation);
-            return sum/operation;
+                return sum / this.operations.length;
+            }
         }
+
     }
-}
